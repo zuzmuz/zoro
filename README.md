@@ -43,6 +43,18 @@ Html attributes are passed as arguments to the component. The content of the com
 
 You can create and extract your own components.
 
+## Goals
+
+The current state of the library supports all know html elements with their respective attributes.
+Additional features in the pipeline includes:
+
+- Better content restrictions on certain elements for better type safety (ex: ul elements can only contain li elements...)
+- Better handling of attributes
+- Utility components for common html components (ex: a wrapper over Html, Head and Body, saving you the hassle of html boiler plate)
+- Better error handling messages (the library uses macros to generate html components, so the error messages are not very helpful)
+- Better documentation
+- Css support (maybe a transpiler for css also)
+
 ## Installation
 
 You can install the library using Swift Package Manager. Add the following dependency to your Package.swift file:
