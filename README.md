@@ -50,6 +50,7 @@ Additional features in the pipeline includes:
 
 - Better content restrictions on certain elements for better type safety (ex: ul elements can only contain li elements...)
 - Better handling of attributes
+- Integration with Htmx
 - Utility components for common html components (ex: a wrapper over Html, Head and Body, saving you the hassle of html boiler plate)
 - Better error handling messages (the library uses macros to generate html components, so the error messages are not very helpful)
 - Better documentation
