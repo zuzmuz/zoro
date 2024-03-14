@@ -19,9 +19,12 @@ Just like SwiftUI, html components are expressed declaratively.
 
 import Zoro
 
-let html = Html(lang: "en") {
+let html = Html {
     Head {
-        Title {"Hello, world!"}
+        Meta(charset: "utf-8")
+        Meta(name: "viewport", content: "width=device-width, initial-scale=1")
+        Link(href: "https://www.w3schools.com/favicon.ico", rel: "icon")
+        Title { "Zoro" }
     }
     Body {
         H1(style: "color:blue;") { "this is a heading" }
@@ -29,7 +32,7 @@ let html = Html(lang: "en") {
         Input()
         Ul {
             for i in 0..<10 {
-                Li { "list item \(i)" }
+                Li { "list item \(i)"}
             }
         }
     }
@@ -38,6 +41,13 @@ let html = Html(lang: "en") {
 print(html.render())
 
 ```
+
+## Benefits
+
+- Because we are writing swift, the Html components we create can be type safe, by settings specific rules over html contents, and checking those rules at compile time
+- The rendering logic is now in the same place as the ui logic, no need for a separate templating engine where we need to send data to
+- This is also influenced by JSX, but in JSX we are still writing xml tags, writing pure swift makes the code easier to write and read
+- Use swift syntax for loops, conditional statements, switch cases and other swift features to generate html
 
 Html attributes are passed as arguments to the component. The content of the component is passed as a closure.
 
